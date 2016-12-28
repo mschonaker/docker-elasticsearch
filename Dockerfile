@@ -16,6 +16,8 @@ RUN set -ex \
    && rm elasticsearch-1.2.1.tar.gz
    
 WORKDIR /elasticsearch
+
+VOLUME /elasticsearch/data
    
 EXPOSE 9200 9300
 CMD ["/elasticsearch/bin/elasticsearch"]
