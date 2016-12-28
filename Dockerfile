@@ -19,6 +19,8 @@ RUN set -ex \
    && rm elasticsearch-$ES_VERSION.tar.gz
    
 WORKDIR /elasticsearch
+
+VOLUME /elasticsearch/data
    
 EXPOSE 9200 9300
 CMD ["/elasticsearch/bin/elasticsearch"]
